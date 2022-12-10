@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AppController!{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<style>
+</style>
+{% endblock %}
+{% block body %}
+
+    <style>
+        html, body, #root {
+            width: 100%;
+            height: 100%;
+        }
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+    <div id="root"></div>
+
+    <div class="example-wrapper">
+
+    {# templates/home.html.twig #}
+
+
+
+    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div {{ react_component('HelloComponent', { 'fullName': 'Tacman' }) }}></div>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ '/home/tac/g/tacman/fortune-demo/src/Controller/AppController.php'|file_link(0) }}">src/Controller/AppController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/home/tac/g/tacman/fortune-demo/templates/app/index.html.twig'|file_link(0) }}">templates/app/index.html.twig</a></code></li>
+    </ul>
+</div>
+{% endblock %}
